@@ -258,7 +258,7 @@ var HExpression = klass({
                 n.args = outArgs;
                 break;
             case "CssClassElement" :
-                result = "((" + this._process(node.right) + ")? ''+" + this._process(node.left) + ":'')";
+                result = "{" + this._process(node.left) + ":" + this._process(node.right) + "}";
                 break;
             case "CssClassExpression" :
                 var list = node.list, length = list.length, code = [];
@@ -268,7 +268,7 @@ var HExpression = klass({
                 if (length < 1) {
                     result = '';
                 } else {
-                    result = "[" + code.join(",") + "].join(' ')";
+                    result = "[" + code.join(",") + "]";
                 }
                 break;
             case "ObjectLiteral":

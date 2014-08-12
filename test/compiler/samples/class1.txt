@@ -65,7 +65,7 @@
             "objectrefs": [
               {"type": "expression", "category": "objectref","path": ["msg","urgent"]}
             ],
-            "code": "(((a0 === \"1\"))? ''+\"warning\":'')",
+            "code": "{\"warning\":(a0 === \"1\")}",
             "line": 2,
             "column": 14
           }
@@ -86,7 +86,7 @@
 ##### Template Code
 test=[
     n.elt(  "div", 
-            {e1:[6,function(a0) {return (((a0 === "1"))? ''+"warning":'');},2],e2:[1,2,"msg","urgent"]},
+            {e1:[6,function(a0) {return {"warning":(a0 === "1")};},2],e2:[1,2,"msg","urgent"]},
             {"class":["",1]},
             0,[
                 n.$text(0,["Hello World "])
